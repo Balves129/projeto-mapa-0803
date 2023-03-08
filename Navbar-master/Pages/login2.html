@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login2.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="container">
+        <h2>Formulário</h2>
+        <form id="form" action="">
+            <div class="input-field">
+                <input required type="text" name="username" id="username" class="inp1"  maxlength="37"   required autocomplete="off"  id="nome" placeholder="Nome">
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <input type="text" name="email" id="email" required autocomplete="off"   maxlength="27"  class="inp2"  placeholder="Email">
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <input required type="text" name="telefone" id="telefone" required  autocomplete="off"  placeholder="Telef. (00) 00000-0000" maxlength="15">
+                <div class="underline"></div>
+            </div>
+            <div class="mini2">
+                <p class="idade">Idade:</p>
+                <div class="underline"></div>
+                <div class="input-field  idadinpt">
+                    <input type="text" name="idade" id="idade" class="idadeinpt" required  maxlength="2"  autocomplete="off"  onkeypress="return (ConsisteNumerico('2', this, event))">
+                    
+                </div>
+            </div>
+            <select name="caixa" id="select">
+                <option>selecione o curso de interesse</option>
+                <option>  Técnico em Administração</option>
+                <option>  Técnico em Contabilidade</option>
+                <option>  Técnico em Desenvolvimento de Sistemas</option>
+                <option>  Técnico em Estética</option>
+                <option>  Técnico em Informática</option>
+                <option>  Técnico em Logística</option>
+                <option>  Técnico em Marketing</option>
+                <option>  Técnico em Recursos humanos</option>
+                <option>  Técnico em Redes</option>
+                <option>  Técnico em Segurança do Trabalho</option>
+            </select>
+            <div class="miniContainer">
+            <p class="eit">Gênero:</p>
+           
+                <div class="input-field">
+                    <input type="checkbox"  id="muie" name="genero"  value="feminino" onclick="marcaDesmarca(this)">
+                    <label for="muie">Feminino</label>
+                </div>
+                <div class="input-field masc">
+                    <input type="checkbox" id="masculino" name="genero" value="masculino" onclick="marcaDesmarca(this);">
+                    <label for="masculino">Masculino</label>
+                </div>
+            </div>
+            <div class="input-field">
+                <input type="checkbox" name="termosUso"  onclick="actived()"  id="termo" value="termo">
+                <label for="termo">Li e Aceito todos os <a  href="./terms.html" onclick="ShowModal()" target="_blank">termos de uso.</a></label>
+            </div>
+            <button type="submit" name="submit" id="btn"  onclick="gerarPDF()" disabled="disabled" value="Confirmar">Confirmar</button>
+            
+        </form>
+       
+    </main>
+</body>
+<script src="servidor.js" type="module"></script>
+<script>
+    
+</script>
+</html>
+</body>
+</html>
